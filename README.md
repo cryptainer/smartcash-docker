@@ -38,8 +38,6 @@ docker run -e conf_smartnode=1 cryptainer/smartcash
 ### Troubleshooting
 Set `DEBUG=1` in order to have all configuration printed to stdout during container startup.
 
-Sentinel logs can be found in `/var/log/sentinel.log`.
-
 ## Contribute
 n order to contribute a patch, the workflow is as follows:
 
