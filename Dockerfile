@@ -23,7 +23,7 @@ RUN mkdir -p `dirname $WALLET_CONF` && \
 
 VOLUME /data
 
-EXPOSE 13333 22350
+EXPOSE 9678 22350
 
 ENTRYPOINT ["docker-entry"]
 
