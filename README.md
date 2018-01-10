@@ -3,11 +3,11 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/cryptainer/smartcash.svg?style=for-the-badge)](https://hub.docker.com/r/cryptainer/smartcash/)
 
 # smartcash-docker
-This is a fully featured docker image for running a smartcash wallet. It's initial purpose is the operation of a smartcash smartnode.
+This is a fully featured docker image for running a SmartCash wallet. It's initial purpose is the operation of a SmartCash SmartNode.
 
 ## Usage
 
-A typical `cryptainer/smartcash` smartnode container can be started as follows:
+A typical `cryptainer/smartcash` SmartNode container can be started as follows:
 ```bash
 docker run \
   -e conf_rpcuser=changeme \
@@ -50,11 +50,11 @@ In general commits should be atomic and diffs should be easy to read. For this r
 Commit messages should be verbose by default, consisting of a short subject line (50 chars max), a blank line and detailed explanatory text as separate paragraph(s); unless the title alone is self-explanatory (like "Corrected typo in main.cpp") then a single title line is sufficient. Commit messages should be helpful to people reading your code in the future, so explain the reasoning for your decisions. Further explanation [here](http://chris.beams.io/posts/git-commit/).
 
 ## License
-Released under the MIT license, under the same terms as [smartcash](https://github.com/SmartCash/smartcash) itself. See [LICENSE](LICENSE) for more info.
+Released under the MIT license, under the same terms as [SmartCash](https://github.com/SmartCash/smartcash) itself. See [LICENSE](LICENSE) for more info.
 
 ## Donations
 Do you like this project and want to say thanks? Your donation is always welcome:
 
-smartcash: `SgZcMNzgVQD9TRQArtJ6a1LTZr5U93dj53`
+SmartCash: `SgZcMNzgVQD9TRQArtJ6a1LTZr5U93dj53`
 
 Bitcoin: `1LHq6uYsqMX23tx2hDripE4zktX6yxfrUF`
