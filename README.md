@@ -3,11 +3,11 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/cryptainer/smartcash.svg?style=for-the-badge)](https://hub.docker.com/r/cryptainer/smartcash/)
 
 # smartcash-docker
-This is a fully featured docker image for running a smartcash wallet. It's initial purpose is the operation of a smartcash masternode.
+This is a fully featured docker image for running a smartcash wallet. It's initial purpose is the operation of a smartcash smartnode.
 
 ## Usage
 
-A typical `cryptainer/smartcash` masternode container can be started as follows:
+A typical `cryptainer/smartcash` smartnode container can be started as follows:
 ```bash
 docker run \
   -e conf_rpcuser=changeme \
@@ -19,7 +19,7 @@ docker run \
   -e conf_server=1 \
   -e conf_smartnode=1 \
   -e conf_txindex=1 \
-  -e conf_smartnodeprivkey=<your masternode privatekey> \
+  -e conf_smartnodeprivkey=<your smartnode privatekey> \
   -e conf_printtoconsole=1 \
   -v /path/to/data:/data \
   cryptainer/smartcash
@@ -30,9 +30,9 @@ docker run \
 
 ### Configuration
 The `smartcash.conf` gets generated on each container start based on the given environment variables prefixed with `conf_`.
-For example, to set `masternode=1` you need to run the container as follows:
+For example, to set `smartnode=1` you need to run the container as follows:
 ```bash
-docker run -e conf_masternode=1 cryptainer/smartcash
+docker run -e conf_smartnode=1 cryptainer/smartcash
 ```
 
 ### Troubleshooting
