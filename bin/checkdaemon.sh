@@ -2,12 +2,12 @@
 # checkdaemon.sh
 # Make sure the daemon is not stuck.
 # Add the following to the crontab (i.e. crontab -e)
-# */30 * * * * ~/smartnode/checkdaemon.sh
+# */30 * * * * $WALLET_RUN/checkdaemon.sh
 
 previousBlock=$(cat $WALLET_DATA/blockcount)
 currentBlock=$(smartcash-cli -conf=$WALLET_CONF getblockcount)
 
-smartcash-cli getblockcount > ~/smartnode/blockcount
+smartcash-cli getblockcount > $WALLET_DATA/blockcount
 
 if [ "$previousBlock" == "$currentBlock" ]; then
   smartcash-cli stop

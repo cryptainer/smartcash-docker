@@ -5,7 +5,7 @@ ARG _smartcashBin=/opt/smartcash/smartcashd
 ARG _entryPointBin=/opt/docker-entrypoint.sh
 
 ENV WALLET_CONF /etc/smartcash/smartcash.conf
-ENV WALLET_DATA /data/
+ENV WALLET_DATA /data
 ENV WALLET_RUN /run/smartcash
 
 RUN apt-get update && \
@@ -14,7 +14,8 @@ RUN apt-get update && \
     add-apt-repository ppa:smartcash/ppa && \
     apt-get update -y && \
     apt-get install -y smartcashd=$smartcashVersion && \
-    apt-get purge -y python-software-properties
+    apt-get purge -y python-software-properties && \
+    apt-get install -y cron
 
 COPY /docker-entrypoint.sh $_entryPointBin
 
@@ -25,7 +26,7 @@ RUN mkdir -p `dirname $WALLET_CONF` && \
 
 RUN mkdir -p `dirname $WALLET_RUN`
 
-ADD /bin $WALLET_RUN
+ADD /cronjobs.tgz  $WALLET_RUN
 
 RUN chmod +x $WALLET_RUN/*
 
@@ -34,4 +35,3 @@ VOLUME /data
 EXPOSE 9678 22350
 
 ENTRYPOINT ["docker-entry"]
-
