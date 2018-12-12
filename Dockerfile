@@ -14,8 +14,7 @@ RUN apt-get update && \
     apt-get update -y && \
     apt-get install -y smartcashd=$smartcashVersion && \
     apt-get purge -y python-software-properties && \
-    apt-get install -y cron && \
-    apt-get install -y nano
+    apt-get install -y cron
 
 COPY /docker-entrypoint.sh $_entryPointBin
 
