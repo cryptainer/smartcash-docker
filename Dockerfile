@@ -4,6 +4,7 @@ ARG smartcashVersion=1.2.6r1-0xenial1
 ARG _smartcashBin=/opt/smartcash/smartcashd
 ARG _entryPointBin=/opt/docker-entrypoint.sh
 
+ENV MASTERNODE_CONF /etc/smartcash/smartnode.conf
 ENV WALLET_CONF /etc/smartcash/smartcash.conf
 ENV WALLET_DATA /data
 ENV WALLET_RUN /run/smartcash
