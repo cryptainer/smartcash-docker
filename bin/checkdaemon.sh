@@ -5,12 +5,12 @@
 # */30 * * * * $WALLET_RUN/checkdaemon.sh
 
 previousBlock=$(cat $WALLET_DATA/blockcount)
-currentBlock=$(smartcash-cli -conf=$WALLET_CONF getblockcount)
+currentBlock=$(getblockcount)
 
-smartcash-cli -conf=$WALLET_CONF getblockcount > $WALLET_DATA/blockcount
+getblockcount > $WALLET_DATA/blockcount
 
 if [ "$previousBlock" == "$currentBlock" ]; then
-  smartcash-cli -conf=$WALLET_CONF stop
+  smartcash-cli -conf=$WALLET_CONF -datadir=$WALLET_DATA stop
   sleep 10
   smartcashd -conf=$WALLET_CONF -datadir=$WALLET_DATA
 fi
