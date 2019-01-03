@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# add differnt aliases for differnet commands
+alias getblockcount='smartcash-cli -conf=$WALLET_CONF -datadir=$WALLET_DATA getblockcount'
+alias getinfo='smartcash-cli -conf=$WALLET_CONF -datadir=$WALLET_DATA getinfo'
+alias nodestatus='smartcash-cli -conf=$WALLET_CONF -datadir=$WALLET_DATA smartnode status'
+
 # Apply smartcash.conf configuration from environment variables
 env | grep ^conf_ | sed -r 's/^conf_//g' > ${WALLET_CONF};
 
