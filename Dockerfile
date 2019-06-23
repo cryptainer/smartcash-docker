@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-ARG smartcashVersion=1.2.6r1-0xenial1
+ARG smartcashVersion=1.2.8r1-0xenial1
 ARG _smartcashBin=/opt/smartcash/smartcashd
 ARG _entryPointBin=/opt/docker-entrypoint.sh
 
